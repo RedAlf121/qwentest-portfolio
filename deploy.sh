@@ -11,7 +11,7 @@ echo "🚀 Deploying to GitHub Pages..."
 if ! git remote get-url origin &> /dev/null; then
     echo "❌ No remote 'origin' found!"
     echo "Please add your GitHub repository:"
-    echo "   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git"
+    echo "   git remote add origin https://github.com/RedAlf121/qwentest-portfolio.git"
     exit 1
 fi
 
@@ -27,7 +27,7 @@ echo ""
 echo "✅ Deployment complete!"
 echo ""
 echo "🌐 Your site will be available at:"
-echo "   https://YOUR_USERNAME.github.io/YOUR_REPO/"
+echo "   https://github.com/RedAlf121/qwentest-portfolio"
 echo ""
 echo "📝 To enable GitHub Pages:"
 echo "   1. Go to your repository on GitHub"
