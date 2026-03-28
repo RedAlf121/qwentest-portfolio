@@ -97,12 +97,40 @@ This portfolio uses [Font Awesome](https://fontawesome.com/) icons. Browse avail
 
 ## Deployment
 
-### GitHub Pages
+### GitHub Pages (Automatic with GitHub Actions)
 
-1. Push to GitHub repository
-2. Go to Settings > Pages
-3. Select branch: `main`, folder: `/ (root)`
-4. Your site will be live at `https://username.github.io/repo-name`
+1. **Create a GitHub repository:**
+   ```bash
+   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   git push -u origin main
+   git push -u origin gh-pages
+   ```
+
+2. **Enable GitHub Actions:**
+   - Go to your repository on GitHub
+   - Navigate to Settings > Actions > General
+   - Enable Actions (if not already enabled)
+
+3. **Configure GitHub Pages:**
+   - Go to Settings > Pages
+   - Under "Build and deployment":
+     - Source: Deploy from a branch
+     - Branch: Select `gh-pages`
+   - Click Save
+
+4. **Automatic deployments:**
+   - Every push to `main` will trigger automatic deployment
+   - View deployment status in Actions tab
+
+### Manual Deployment Script
+
+```bash
+# Add your GitHub remote
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+
+# Run the deploy script
+./deploy.sh
+```
 
 ### Netlify
 
