@@ -10,18 +10,13 @@
     // DOM Elements
     // ========================================
     const navbar = document.getElementById('navbar');
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-    const navOverlay = document.getElementById('navOverlay');
     const navLinks = document.querySelectorAll('.nav-link');
     const backToTop = document.getElementById('backToTop');
     const contactForm = document.getElementById('contactForm');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-    const roleItems = document.querySelectorAll('.role-item');
-    const progressBars = document.querySelectorAll('.progress-bar');
-    const statNumbers = document.querySelectorAll('.stat-number');
     const particlesContainer = document.getElementById('particles');
+
+    // Elements rendered from portfolio-data.js are queried inside each init(),
+    // after the content renderer has populated the DOM.
 
     // ========================================
     // Navigation
@@ -29,7 +24,6 @@
     const Navigation = {
         init() {
             this.handleScroll();
-            this.handleToggle();
             this.handleLinks();
             this.handleActiveLink();
         },
@@ -50,39 +44,6 @@
                     ticking = true;
                 }
             }, { passive: true });
-        },
-
-        handleToggle() {
-            // Handle both click and touch events
-            const toggleMenu = () => {
-                const isActive = !navMenu.classList.contains('active');
-                navToggle.classList.toggle('active', isActive);
-                navMenu.classList.toggle('active', isActive);
-                navOverlay.classList.toggle('active', isActive);
-                document.body.style.overflow = isActive ? 'hidden' : '';
-            };
-
-            navToggle.addEventListener('click', toggleMenu);
-            navToggle.addEventListener('touchstart', (e) => {
-                e.preventDefault();
-                toggleMenu();
-            });
-
-            // Close menu when clicking overlay
-            const closeMenu = () => {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                navOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            };
-
-            navOverlay.addEventListener('click', closeMenu);
-            navOverlay.addEventListener('touchstart', closeMenu, { passive: true });
-
-            // Close menu when clicking a link
-            navLinks.forEach(link => {
-                link.addEventListener('click', closeMenu);
-            });
         },
 
         handleLinks() {
@@ -201,8 +162,10 @@
     // ========================================
     const RoleRotator = {
         init() {
+            const roles = Array.from(document.querySelectorAll('.role-item'));
+            if (roles.length < 2) return;
+
             let currentIndex = 0;
-            const roles = Array.from(roleItems);
 
             setInterval(() => {
                 roles[currentIndex].classList.remove('active');
@@ -217,7 +180,9 @@
     // ========================================
     const ProjectFilter = {
         init() {
-            filterBtns.forEach(btn => {
+            const buttons = document.querySelectorAll('[data-project-filters] .filter-btn');
+
+            buttons.forEach(btn => {
                 btn.addEventListener('click', () => this.applyFilter(btn));
                 btn.addEventListener('touchstart', (e) => {
                     e.preventDefault();
@@ -228,18 +193,20 @@
 
         applyFilter(btn) {
             // Update active button
-            filterBtns.forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('[data-project-filters] .filter-btn')
+                .forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            const filter = btn.dataset.filter;
-            this.filterProjects(filter);
+            this.filterProjects(btn.dataset.filter);
         },
 
         filterProjects(filter) {
-            projectCards.forEach((card, index) => {
-                const category = card.dataset.category;
+            document.querySelectorAll('[data-projects] .project-card').forEach((card, index) => {
+                const categories = (card.dataset.categories || card.dataset.category || '')
+                    .split(/\s+/)
+                    .filter(Boolean);
 
-                if (filter === 'all' || category === filter) {
+                if (filter === 'all' || categories.includes(filter)) {
                     card.style.display = 'block';
                     card.style.animation = `fadeInUp 0.5s ease ${index * 0.1}s forwards`;
                 } else {
@@ -250,73 +217,12 @@
     };
 
     // ========================================
-    // Progress Bars Animation
-    // ========================================
-    const ProgressBars = {
-        init() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const progressBar = entry.target;
-                        const progress = progressBar.dataset.progress;
-                        
-                        setTimeout(() => {
-                            progressBar.style.width = `${progress}%`;
-                        }, 200);
-
-                        observer.unobserve(progressBar);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            progressBars.forEach(bar => observer.observe(bar));
-        }
-    };
-
-    // ========================================
-    // Counter Animation
-    // ========================================
-    const CounterAnimation = {
-        init() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = parseInt(counter.dataset.count);
-                        this.animateCounter(counter, target);
-                        observer.unobserve(counter);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            statNumbers.forEach(counter => observer.observe(counter));
-        },
-
-        animateCounter(element, target) {
-            let current = 0;
-            const increment = target / 50;
-            const duration = 2000;
-            const stepTime = duration / 50;
-
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = `${target}+`;
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current);
-                }
-            }, stepTime);
-        }
-    };
-
-    // ========================================
     // Scroll Animations
     // ========================================
     const ScrollAnimations = {
         init() {
             const animatedElements = document.querySelectorAll(
-                '.skill-card, .project-card, .stat-item, .about-content, .contact-content'
+                '.skill-card, .project-card, .about-content, .contact-content'
             );
 
             const observer = new IntersectionObserver((entries) => {
@@ -470,47 +376,39 @@
     };
 
     // ========================================
-    // Keyboard Navigation
-    // ========================================
-    const KeyboardNav = {
-        init() {
-            document.addEventListener('keydown', (e) => {
-                // ESC to close mobile menu
-                if (e.key === 'Escape') {
-                    navToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                }
-            });
-        }
-    };
-
-    // ========================================
     // Initialize All Modules
     // ========================================
     const App = {
+        started: false,
+
         init() {
-            // Wait for DOM to be ready
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', () => this.start());
-            } else {
+            // The renderer runs before this script's DOMContentLoaded callback,
+            // but listen explicitly so interaction setup never races with it.
+            if (document.documentElement.dataset.portfolioRendered === 'true' ||
+                document.readyState !== 'loading') {
                 this.start();
+                return;
             }
+
+            document.addEventListener('portfolio:rendered', () => this.start(), { once: true });
+            // Fallback in case the renderer failed to load
+            document.addEventListener('DOMContentLoaded', () => this.start(), { once: true });
         },
 
         start() {
+            if (this.started) return;
+            this.started = true;
+
             // Initialize all modules
             Navigation.init();
             BackToTop.init();
             Particles.init();
             RoleRotator.init();
             ProjectFilter.init();
-            ProgressBars.init();
-            CounterAnimation.init();
             ScrollAnimations.init();
             ContactForm.init();
             SmoothScroll.init();
             SkillCards.init();
-            KeyboardNav.init();
             Parallax.init();
 
             // Log initialization
