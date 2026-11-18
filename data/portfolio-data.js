@@ -220,8 +220,9 @@ const portfolioData = {
             icon: "fa-cubes",
             tags: ["Unity", "C#", "Shaders", "Game Design"],
             year: 2025,
-            status: "Release pending",
-            demoUrl: "",
+            status: "Released",
+            demoUrl: "https://github.com/RedAlf121/Cutetris/releases/tag/alpha",
+            demoLabel: "View Release",
             codeUrl: "https://github.com/RedAlf121/Cutetris"
         }
     ],

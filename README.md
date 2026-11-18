@@ -115,6 +115,7 @@ Optional fields:
 | `imageAlt` | Alt text for the image (defaults to `title`) |
 | `year` / `status` | Small meta row on the card |
 | `demoUrl` / `codeUrl` | Buttons on the card overlay; omitted when empty |
+| `demoLabel` | Override the demo button label (e.g. `View Release`) |
 
 Filter buttons are derived from the categories used in `projects`. Use `categoryLabels`
 to control their display text:
