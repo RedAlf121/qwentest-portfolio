@@ -29,5 +29,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: .
-          exclude_assets: '.git,.github,README.md,.gitignore'
+          exclude_assets: '.github,README.md,.gitignore'
           commit_message: 'Deploy portfolio from ${{ github.sha }}'
