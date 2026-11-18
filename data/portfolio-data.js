@@ -130,7 +130,9 @@ const portfolioData = {
             year: 2026,
             status: "Live",
             demoUrl: "https://minecraft-clone-jet.vercel.app/",
-            codeUrl: "https://github.com/RedAlf121/minecraft-clone"
+            codeUrl: "https://github.com/RedAlf121/minecraft-clone",
+            image: "public/images/minecraft-clone.webp",
+            imageAlt: "Screenshot of the Minecraft Clone running in the browser"
         },
         {
             title: "Smart Library Loan Monitoring",
@@ -185,7 +187,9 @@ const portfolioData = {
             year: 2025,
             status: "Live",
             demoUrl: "https://redalf121.github.io/tic-tac-toe/",
-            codeUrl: "https://github.com/RedAlf121/tic-tac-toe"
+            codeUrl: "https://github.com/RedAlf121/tic-tac-toe",
+            image: "public/images/tic-tac-toe.webp",
+            imageAlt: "Screenshot of the Tic-Tac-Toe AI game"
         },
         {
             title: "Dirb Clone",

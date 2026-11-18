@@ -82,6 +82,10 @@ The Hero code window is driven by `codeWindow.filename` and `codeWindow.code`;
 set `codeWindow` to remove it. The Hero avatar and the large About photo both use
 `public/icon.jpeg`.
 
+Deployed projects use pre-rendered screenshots stored in `public/images/*.webp` and
+referenced through each project's `image` field. Projects without a deploy keep the
+Font Awesome placeholder until a visual is added.
+
 ### Add Projects
 
 Add an object to `projects` in `data/portfolio-data.js`. That is all: the card and its
