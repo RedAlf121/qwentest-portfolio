@@ -9,9 +9,9 @@ const portfolioData = {
         name: "Alfredo Hernandez Rodriguez",
         title: "Fullstack Developer",
         greeting: "Hello, I'm",
-        location: "Barcelona, Spain",
+        location: "Santo Domingo, Dominican Republic",
         email: "andezmgk@gmail.com",
-        phone: "+53 51948102",
+        phone: "+1 (809) 488-2703",
         availability: "Available for hire",
         bio: `I'm a fullstack developer focused on building web and mobile applications end to end,
         with <strong>Python</strong> on the backend, <strong>JavaScript/TypeScript</strong> on the frontend
@@ -244,8 +244,8 @@ const portfolioData = {
         heading: "Let's build something amazing together!",
         description: "Whether you have a project in mind, want to discuss opportunities, or just want to connect, I'd love to hear from you.",
         email: "andezmgk@gmail.com",
-        phone: "+53 51948102",
-        location: "Barcelona, Spain",
+        phone: "+1 (809) 488-2703",
+        location: "Santo Domingo, Dominican Republic",
         formFields: [
             { name: "name", label: "Name", type: "text", placeholder: "Your Name", required: true },
             { name: "email", label: "Email", type: "email", placeholder: "your.email@example.com", required: true },
