@@ -228,15 +228,15 @@ const portfolioData = {
         },
         {
             title: "Cutetris",
-            description: "Unity Tetris-like game themed around university logos, with custom C# gameplay scripts and shader work. A Godot port is also maintained in a separate repository.",
+            description: "Godot puzzle game inspired by Tetris: instead of clearing lines, the player fits pieces together to rebuild university logos. Built with GDScript, with custom gameplay scenes and menus.",
             categories: ["gamedev"],
             icon: "fa-cubes",
-            tags: ["Unity", "C#", "Shaders", "Game Design"],
+            tags: ["Godot", "GDScript", "Game Design", "Puzzles"],
             year: 2025,
             status: "Released",
             demoUrl: "https://github.com/RedAlf121/Cutetris/releases/tag/alpha",
             demoLabel: "View Release",
-            codeUrl: "https://github.com/RedAlf121/Cutetris"
+            codeUrl: "https://github.com/RedAlf121/cutetris-godot"
         }
     ],
 
