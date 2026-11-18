@@ -122,6 +122,19 @@ const portfolioData = {
     // Projects Configuration
     projects: [
         {
+            title: "Graco Construction Group",
+            description: "Corporate website for a Miami-based construction and design firm, built with Nuxt 4, Vue 3 and TypeScript. Multi-page content-driven site with a service hierarchy, a project portfolio with detail pages and galleries, team, about and contact sections, backed by static JSON data and a responsive dark design.",
+            categories: ["fullstack", "frontend"],
+            icon: "fa-building",
+            tags: ["Nuxt", "Vue 3", "TypeScript", "Tailwind CSS", "SSR/SSG"],
+            year: 2026,
+            status: "Live",
+            demoUrl: "https://graco-construction.vercel.app",
+            codeUrl: "https://github.com/RedAlf121/graco-construction",
+            image: "public/images/graco-construction.webp",
+            imageAlt: "Screenshot of the Graco Construction Group website"
+        },
+        {
             title: "Minecraft Clone",
             description: "Playable Minecraft-inspired world in the browser built with React, Three.js and React Three Fiber: block placement and destruction, gravity and collision physics with Cannon, Zustand state management and a prebuilt village map.",
             categories: ["fullstack", "gamedev"],
