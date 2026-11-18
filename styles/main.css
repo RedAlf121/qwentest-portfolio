@@ -362,39 +362,6 @@ input, textarea {
     width: 100%;
 }
 
-.nav-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: var(--spacing-2);
-    z-index: 1001;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.nav-toggle span {
-    width: 25px;
-    height: 2px;
-    background: var(--text-primary);
-    transition: all var(--transition-base);
-}
-
-/* Mobile nav overlay */
-.nav-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    z-index: 998;
-    opacity: 0;
-    visibility: hidden;
-    transition: all var(--transition-base);
-}
-
-.nav-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
 /* ========================================
    Hero Section
    ======================================== */
@@ -563,7 +530,7 @@ input, textarea {
     transform: translateY(-3px);
 }
 
-/* Code Window */
+/* Hero code window */
 .hero-visual {
     animation: fadeInUp 1s ease 0.3s backwards;
 }
@@ -599,6 +566,15 @@ input, textarea {
     font-size: var(--font-size-xs);
     color: var(--text-muted);
     margin-left: var(--spacing-4);
+}
+
+.window-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: auto;
+    border: 1px solid var(--color-gray-700);
 }
 
 .window-content {
@@ -697,18 +673,11 @@ input, textarea {
     border: 1px solid var(--color-gray-700);
 }
 
-.image-placeholder {
+.about-image-element {
+    display: block;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--gradient-primary);
-}
-
-.image-placeholder i {
-    font-size: 8rem;
-    color: rgba(255, 255, 255, 0.3);
+    object-fit: cover;
 }
 
 .image-decoration {
@@ -721,30 +690,6 @@ input, textarea {
     border-radius: 50%;
     opacity: 0.2;
     filter: blur(20px);
-}
-
-.experience-badge {
-    position: absolute;
-    bottom: var(--spacing-6);
-    right: var(--spacing-6);
-    background: var(--bg-card);
-    padding: var(--spacing-4) var(--spacing-6);
-    border-radius: var(--radius-xl);
-    text-align: center;
-    border: 1px solid var(--color-gray-700);
-    box-shadow: var(--shadow-lg);
-}
-
-.exp-number {
-    display: block;
-    font-size: var(--font-size-3xl);
-    font-weight: 700;
-    color: var(--color-primary-light);
-}
-
-.exp-text {
-    font-size: var(--font-size-xs);
-    color: var(--text-secondary);
 }
 
 .about-heading {
@@ -762,34 +707,6 @@ input, textarea {
     color: var(--text-secondary);
     margin-bottom: var(--spacing-4);
     line-height: 1.8;
-}
-
-.about-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-6);
-    margin: var(--spacing-8) 0;
-}
-
-.stat-item {
-    text-align: center;
-    padding: var(--spacing-6);
-    background: var(--bg-card);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--color-gray-700);
-}
-
-.stat-number {
-    display: block;
-    font-size: var(--font-size-3xl);
-    font-weight: 700;
-    color: var(--color-primary-light);
-    margin-bottom: var(--spacing-2);
-}
-
-.stat-label {
-    font-size: var(--font-size-sm);
-    color: var(--text-secondary);
 }
 
 /* ========================================
@@ -872,6 +789,13 @@ input, textarea {
     color: var(--color-primary-light);
 }
 
+.skill-image {
+    display: block;
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
 .skill-name {
     font-size: var(--font-size-lg);
     font-weight: 600;
@@ -882,60 +806,7 @@ input, textarea {
 .skill-description {
     font-size: var(--font-size-sm);
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-4);
-}
-
-.skill-progress {
-    height: 6px;
-    background: var(--color-gray-700);
-    border-radius: var(--radius-full);
-    overflow: hidden;
-    margin-bottom: var(--spacing-2);
-}
-
-.progress-bar {
-    height: 100%;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-full);
-    width: 0;
-    transition: width 1s ease;
-}
-
-.skill-percentage {
-    font-size: var(--font-size-sm);
-    color: var(--color-primary-light);
-    font-weight: 500;
-}
-
-/* Tools Grid */
-.tools-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-4);
-}
-
-.tool-item {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-2);
-    padding: var(--spacing-3) var(--spacing-5);
-    background: var(--bg-card);
-    border-radius: var(--radius-full);
-    border: 1px solid var(--color-gray-700);
-    font-size: var(--font-size-sm);
-    color: var(--text-secondary);
-    transition: all var(--transition-base);
-}
-
-.tool-item:hover {
-    border-color: var(--color-primary);
-    color: var(--text-primary);
-    transform: translateY(-2px);
-}
-
-.tool-item i {
-    font-size: var(--font-size-lg);
-    color: var(--color-primary-light);
+    margin-bottom: 0;
 }
 
 /* ========================================
@@ -1019,6 +890,18 @@ input, textarea {
     color: var(--color-gray-600);
 }
 
+.project-image-element {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.project-card:hover .project-image-element {
+    transform: scale(1.1);
+}
+
 .project-overlay {
     position: absolute;
     inset: 0;
@@ -1090,6 +973,26 @@ input, textarea {
     font-size: var(--font-size-xs);
     color: var(--color-primary-light);
     border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    margin-top: var(--spacing-4);
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.project-year {
+    font-weight: 600;
+    color: var(--color-primary-light);
+}
+
+.project-status {
+    padding: var(--spacing-1) var(--spacing-3);
+    border: 1px solid var(--color-gray-700);
+    border-radius: var(--radius-full);
 }
 
 /* ========================================
@@ -1400,14 +1303,6 @@ input, textarea {
         font-size: var(--font-size-xl);
     }
 
-    .about-stats {
-        gap: var(--spacing-4);
-    }
-
-    .stat-item {
-        padding: var(--spacing-4);
-    }
-
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-6);
@@ -1437,76 +1332,19 @@ input, textarea {
 
     .nav-container {
         --container-padding: 1rem;
+        flex-direction: column;
+        gap: var(--spacing-3);
     }
 
     .nav-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(10, 10, 18, 0.98);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        padding: 0;
-        gap: var(--spacing-8);
-        transform: translateX(100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all var(--transition-base);
-        z-index: 999;
+        gap: var(--spacing-2) var(--spacing-5);
     }
-
-    .nav-menu.active {
-        transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .nav-menu li {
-        width: auto;
-        padding: 0;
-        border-bottom: none;
-        opacity: 0;
-        transform: translateX(30px);
-        transition: all 0.4s ease;
-    }
-
-    .nav-menu.active li {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    .nav-menu.active li:nth-child(1) { transition-delay: 0.1s; }
-    .nav-menu.active li:nth-child(2) { transition-delay: 0.15s; }
-    .nav-menu.active li:nth-child(3) { transition-delay: 0.2s; }
-    .nav-menu.active li:nth-child(4) { transition-delay: 0.25s; }
-    .nav-menu.active li:nth-child(5) { transition-delay: 0.3s; }
 
     .nav-link {
-        display: block;
-        padding: var(--spacing-4) var(--spacing-8);
-        font-size: var(--font-size-xl);
-        font-weight: 600;
-    }
-
-    .nav-toggle {
-        display: flex;
-        padding: var(--spacing-2);
-    }
-
-    .nav-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .nav-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-1) 0;
     }
 
     .hero {
@@ -1580,19 +1418,6 @@ input, textarea {
         width: 50px;
     }
 
-    .about-stats {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-4);
-    }
-
-    .stat-item {
-        padding: var(--spacing-5);
-    }
-
-    .stat-number {
-        font-size: var(--font-size-2xl);
-    }
-
     .skills-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-5);
@@ -1600,19 +1425,6 @@ input, textarea {
 
     .skill-card {
         padding: var(--spacing-6);
-    }
-
-    .tools-grid {
-        gap: var(--spacing-3);
-    }
-
-    .tool-item {
-        padding: var(--spacing-2) var(--spacing-4);
-        font-size: var(--font-size-xs);
-    }
-
-    .tool-item i {
-        font-size: var(--font-size-base);
     }
 
     .projects-grid {
@@ -1736,20 +1548,6 @@ input, textarea {
         max-width: 280px;
     }
 
-    .image-placeholder i {
-        font-size: 5rem;
-    }
-
-    .experience-badge {
-        bottom: var(--spacing-4);
-        right: var(--spacing-4);
-        padding: var(--spacing-3) var(--spacing-4);
-    }
-
-    .exp-number {
-        font-size: var(--font-size-2xl);
-    }
-
     .about-heading {
         font-size: var(--font-size-lg);
         line-height: 1.4;
@@ -1766,6 +1564,11 @@ input, textarea {
     .skill-icon {
         width: 50px;
         height: 50px;
+    }
+
+    .skill-image {
+        width: 28px;
+        height: 28px;
     }
 
     .skill-icon i {
@@ -1892,23 +1695,6 @@ input, textarea {
 
     .skill-card {
         padding: var(--spacing-4);
-    }
-
-    .skill-percentage {
-        font-size: 0.7rem;
-    }
-
-    .tools-grid {
-        gap: var(--spacing-2);
-    }
-
-    .tool-item {
-        padding: var(--spacing-2) var(--spacing-3);
-        font-size: 0.65rem;
-    }
-
-    .tool-item i {
-        font-size: 0.875rem;
     }
 
     .projects-filter {
@@ -2056,8 +1842,7 @@ input, textarea {
     }
 
     .skill-card,
-    .project-card,
-    .stat-item {
+    .project-card {
         break-inside: avoid;
         border: 1px solid #ccc;
     }

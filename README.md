@@ -1,6 +1,6 @@
 # Fullstack Developer Portfolio
 
-A modern, responsive portfolio website for a fullstack developer specializing in **Spring Boot**, **Angular**, and **Data Science** with Python.
+A modern, responsive portfolio website for a fullstack developer building applications in **Python**, **JavaScript/TypeScript** and **Dart**, with **AI/LLM integration**.
 
 ## Features
 
@@ -63,33 +63,67 @@ skills: {
         title: "Fullstack Development",
         items: [
             {
-                name: "Spring Boot",
-                description: "Your description",
-                icon: "fa-leaf",
-                percentage: 95
+                name: "Python",
+                description: "FastAPI, Django, REST APIs",
+                image: "https://cdn.simpleicons.org/python/3776AB"
             }
-            // ... more skills
+            // ... one entry per technology, each with its own logo URL
         ]
     }
-    // ... more categories
+    // ... more categories; a matching [data-skill-items="..."] container is needed
 }
 ```
 
+Skills have no score or percentage. Use `image` for a logo URL (Simple Icons CDN is
+used here), or `iconClass` for a full Font Awesome class as a fallback
+(e.g. `"fas fa-robot"`), or `icon` for the default brand style.
+
+The Hero code window is driven by `codeWindow.filename` and `codeWindow.code`;
+set `codeWindow` to remove it. The Hero avatar and the large About photo both use
+`public/icon.jpeg`.
+
 ### Add Projects
+
+Add an object to `projects` in `data/portfolio-data.js`. That is all: the card and its
+filter button are generated automatically. No HTML or JS changes needed.
 
 ```javascript
 projects: [
     {
         title: "Your Project",
-        description: "Project description",
-        category: "fullstack", // fullstack, datascience, backend
-        icon: "fa-project-diagram",
-        tags: ["Tag1", "Tag2"],
-        demoUrl: "https://...",
-        codeUrl: "https://github.com/..."
+        description: "What it does and what problem it solves",
+        category: "backend",              // simple category
+        // categories: ["backend", "fullstack"], // or several categories
+        icon: "fa-project-diagram",       // fallback when there is no image
+        tags: ["Python", "FastAPI"],
+        demoUrl: "https://...",           // optional; empty/"#" hides the link
+        codeUrl: "https://github.com/..." // optional
     }
 ]
 ```
+
+Optional fields:
+
+| Field | Purpose |
+|---|---|
+| `categories` | Array of categories; takes precedence over `category` |
+| `image` | Path relative to `index.html`, e.g. `assets/projects/my-project.png` |
+| `imageAlt` | Alt text for the image (defaults to `title`) |
+| `year` / `status` | Small meta row on the card |
+| `demoUrl` / `codeUrl` | Buttons on the card overlay; omitted when empty |
+
+Filter buttons are derived from the categories used in `projects`. Use `categoryLabels`
+to control their display text:
+
+```javascript
+categoryLabels: {
+    fullstack: "Fullstack",
+    datascience: "Data Science",
+    backend: "Backend"
+}
+```
+
+Social links with an empty URL are hidden, so you can fill them in later.
 
 ## Icons
 

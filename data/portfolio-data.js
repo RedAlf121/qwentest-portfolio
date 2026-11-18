@@ -13,130 +13,108 @@ const portfolioData = {
         email: "andezmgk@gmail.com",
         phone: "+53 51948102",
         availability: "Available for hire",
-        bio: `I'm a passionate fullstack developer with extensive expertise in building 
-        robust, scalable enterprise applications using <strong>Spring Boot</strong> for 
-        backend services and <strong>Angular</strong> for dynamic, responsive frontends.`,
-        bioExtended: `Beyond traditional web development, I bring strong <strong>Data Science</strong> 
-        capabilities to the table, leveraging Python's powerful ecosystem including 
-        <strong>Pandas, NumPy, Scikit-learn, and TensorFlow</strong> to build 
-        intelligent, data-driven applications.`,
-        bioConclusion: `My unique combination of fullstack development and data science skills allows 
-        me to create comprehensive solutions that not only function flawlessly but also 
-        incorporate machine learning and analytics capabilities.`
+        bio: `I'm a fullstack developer focused on building web and mobile applications end to end,
+        with <strong>Python</strong> on the backend, <strong>JavaScript/TypeScript</strong> on the frontend
+        and <strong>Dart</strong> for cross-platform mobile apps.`,
+        bioExtended: `I design REST APIs, work with SQL and NoSQL databases, and integrate
+        <strong>LLMs and AI agents</strong> into real products using tools like LangChain and MCP.
+        On the client side I build responsive interfaces with React and Vue, and ship mobile
+        experiences with Flutter.`,
+        bioConclusion: `I enjoy taking an idea all the way to a deployed application, combining solid
+        fullstack foundations with practical AI integration.`
     },
 
     // Social Media Links
     social: {
-        github: "https://github.com/carlosmendoza",
-        linkedin: "https://linkedin.com/in/carlosmendoza",
-        twitter: "https://twitter.com/carlosdev",
-        kaggle: "https://kaggle.com/carlosmendoza"
+        github: "https://github.com/RedAlf121",
+        // Fill these in when you have real profiles; empty ones are hidden
+        linkedin: "",
+        twitter: "",
+        kaggle: ""
     },
 
     // Hero Section - Rotating Roles
     roles: [
         "Fullstack Developer",
-        "Spring Boot Expert",
-        "Angular Specialist",
-        "Data Scientist"
+        "Computer Engineer",
+        "AI Engineer"
     ],
 
     // Hero Description
-    heroDescription: "Building scalable enterprise applications with modern Java & TypeScript, while leveraging data science to drive intelligent solutions.",
+    heroDescription: "Building fullstack applications with Python, JavaScript/TypeScript and Dart, and integrating AI into real products.",
 
-    // Statistics
-    stats: [
-        { number: 50, label: "Projects Completed" },
-        { number: 30, label: "Happy Clients" },
-        { number: 15, label: "Data Models" }
-    ],
-
-    // Skills Configuration
+    // Skills Configuration (no scores or percentages, one logo per technology)
     skills: {
         fullstack: {
             title: "Fullstack Development",
             icon: "fa-layer-group",
             items: [
                 {
-                    name: "Spring Boot",
-                    description: "REST APIs, Microservices, Security, Data JPA",
-                    icon: "fa-leaf",
-                    percentage: 95
+                    name: "Python",
+                    description: "FastAPI, Django, REST APIs",
+                    image: "https://cdn.simpleicons.org/python/3776AB"
                 },
                 {
-                    name: "Angular",
-                    description: "Components, RxJS, NgRx, Material",
-                    icon: "fa-angular",
-                    percentage: 90
-                },
-                {
-                    name: "Java",
-                    description: "Core Java, Streams, Concurrency",
-                    icon: "fa-java",
-                    percentage: 92
+                    name: "JavaScript",
+                    description: "React, Vue, Node.js, Vite",
+                    image: "https://cdn.simpleicons.org/javascript/F7DF1E"
                 },
                 {
                     name: "TypeScript",
-                    description: "Advanced Types, Generics, Decorators",
-                    icon: "fa-js",
-                    percentage: 88
+                    description: "Typed frontend and backend code",
+                    image: "https://cdn.simpleicons.org/typescript/3178C6"
+                },
+                {
+                    name: "Dart & Flutter",
+                    description: "Cross-platform mobile apps",
+                    image: "https://cdn.simpleicons.org/flutter/02569B"
+                },
+                {
+                    name: "PostgreSQL",
+                    description: "Relational data modeling",
+                    image: "https://cdn.simpleicons.org/postgresql/4169E1"
+                },
+                {
+                    name: "MongoDB",
+                    description: "Document-based storage",
+                    image: "https://cdn.simpleicons.org/mongodb/47A248"
                 }
             ]
         },
-        datascience: {
-            title: "Data Science & ML",
+        ai: {
+            title: "AI & LLM Integration",
             icon: "fa-brain",
             items: [
                 {
-                    name: "Python",
-                    description: "Advanced Python, Async, Decorators",
-                    icon: "fa-python",
-                    percentage: 90
+                    name: "LLM Agents",
+                    description: "Tool calling, agent loops, prompt design",
+                    iconClass: "fas fa-robot"
                 },
                 {
-                    name: "Pandas & NumPy",
-                    description: "Data Analysis, Manipulation",
-                    icon: "fa-table",
-                    percentage: 88
+                    name: "LangChain",
+                    description: "Chains, agents, structured output",
+                    image: "https://cdn.simpleicons.org/langchain/A5B4FC"
+                },
+                {
+                    name: "MCP",
+                    description: "Model Context Protocol servers and tools",
+                    image: "https://cdn.simpleicons.org/modelcontextprotocol/A5B4FC"
+                },
+                {
+                    name: "Pandas",
+                    description: "Data analysis and manipulation",
+                    image: "https://cdn.simpleicons.org/pandas/A5B4FC"
+                },
+                {
+                    name: "NumPy",
+                    description: "Numerical computing",
+                    image: "https://cdn.simpleicons.org/numpy/A5B4FC"
                 },
                 {
                     name: "Scikit-learn",
-                    description: "ML Algorithms, Pipelines",
-                    icon: "fa-project-diagram",
-                    percentage: 85
-                },
-                {
-                    name: "TensorFlow/Keras",
-                    description: "Deep Learning, Neural Networks",
-                    icon: "fa-network-wired",
-                    percentage: 80
-                },
-                {
-                    name: "Data Visualization",
-                    description: "Matplotlib, Seaborn, Plotly",
-                    icon: "fa-chart-line",
-                    percentage: 87
-                },
-                {
-                    name: "SQL & NoSQL",
-                    description: "PostgreSQL, MongoDB, Redis",
-                    icon: "fa-database",
-                    percentage: 85
+                    description: "Machine learning pipelines",
+                    image: "https://cdn.simpleicons.org/scikitlearn/F8991C"
                 }
-            ]
-        },
-        tools: {
-            title: "Tools & DevOps",
-            icon: "fa-tools",
-            items: [
-                { name: "Docker", icon: "fa-docker" },
-                { name: "AWS", icon: "fa-aws" },
-                { name: "Git", icon: "fa-git-alt" },
-                { name: "Jenkins", icon: "fa-jenkins" },
-                { name: "Linux", icon: "fa-linux" },
-                { name: "Bash", icon: "fa-terminal" },
-                { name: "Maven", icon: "fa-maven" },
-                { name: "NPM", icon: "fa-npm" }
             ]
         }
     },
@@ -144,76 +122,126 @@ const portfolioData = {
     // Projects Configuration
     projects: [
         {
-            title: "E-Commerce Platform",
-            description: "Full-stack e-commerce solution with microservices architecture, featuring real-time inventory, payment processing, and analytics dashboard.",
-            category: "fullstack",
-            icon: "fa-shopping-cart",
-            tags: ["Spring Boot", "Angular", "PostgreSQL", "Docker"],
-            demoUrl: "#",
-            codeUrl: "https://github.com/carlosmendoza/ecommerce-platform"
+            title: "Minecraft Clone",
+            description: "Playable Minecraft-inspired world in the browser built with React, Three.js and React Three Fiber: block placement and destruction, gravity and collision physics with Cannon, Zustand state management and a prebuilt village map.",
+            categories: ["fullstack", "gamedev"],
+            icon: "fa-cube",
+            tags: ["React", "Three.js", "React Three Fiber", "Cannon", "Zustand"],
+            year: 2026,
+            status: "Live",
+            demoUrl: "https://minecraft-clone-jet.vercel.app/",
+            codeUrl: "https://github.com/RedAlf121/minecraft-clone"
         },
         {
-            title: "Customer Churn Prediction",
-            description: "ML-powered analytics platform predicting customer churn with 94% accuracy using ensemble methods and providing actionable insights.",
-            category: "datascience",
-            icon: "fa-chart-pie",
-            tags: ["Python", "Scikit-learn", "Pandas", "Plotly"],
-            demoUrl: "#",
-            codeUrl: "https://github.com/carlosmendoza/churn-prediction"
+            title: "Smart Library Loan Monitoring",
+            description: "FastAPI platform for library loan monitoring where LLM agents query MongoDB through MCP tools, send automated email reminders and apply custom business rules, with validated JSON post-processing.",
+            categories: ["backend", "ai", "datascience"],
+            icon: "fa-book-open",
+            tags: ["Python", "FastAPI", "MongoDB", "MCP", "LLM Agents"],
+            year: 2025,
+            status: "Completed",
+            demoUrl: "",
+            codeUrl: "https://github.com/RedAlf121/monitoreo-inteligente"
         },
         {
-            title: "Enterprise Resource Planner",
-            description: "Scalable ERP system handling 10K+ daily transactions with role-based access, audit logging, and real-time reporting.",
-            category: "backend",
-            icon: "fa-building",
-            tags: ["Spring Boot", "Microservices", "Redis", "Kafka"],
-            demoUrl: "#",
-            codeUrl: "https://github.com/carlosmendoza/erp-system"
-        },
-        {
-            title: "Sentiment Analysis API",
-            description: "NLP service analyzing customer feedback using BERT models, processing 1M+ reviews with real-time sentiment scoring.",
-            category: "datascience",
-            icon: "fa-comments",
-            tags: ["Python", "TensorFlow", "FastAPI", "NLP"],
-            demoUrl: "#",
-            codeUrl: "https://github.com/carlosmendoza/sentiment-api"
-        },
-        {
-            title: "Healthcare Management System",
-            description: "HIPAA-compliant platform for patient management, appointments, and medical records with end-to-end encryption.",
-            category: "fullstack",
-            icon: "fa-hospital",
-            tags: ["Spring Boot", "Angular", "Security", "MongoDB"],
-            demoUrl: "#",
-            codeUrl: "https://github.com/carlosmendoza/healthcare-system"
-        },
-        {
-            title: "Recommendation Engine",
-            description: "Hybrid recommendation system combining collaborative filtering and content-based approaches, increasing engagement by 45%.",
-            category: "datascience",
+            title: "LangChain MCP Builder",
+            description: "Builder-pattern framework for creating LangChain tool-calling agents connected to MCP servers, with pluggable model factories, cached tool loading and configurable prompts.",
+            categories: ["ai", "backend"],
             icon: "fa-robot",
-            tags: ["Python", "PyTorch", "Spark", "Redis"],
-            demoUrl: "#",
-            codeUrl: "https://github.com/carlosmendoza/recommendation-engine"
+            tags: ["Python", "LangChain", "MCP", "Groq", "Builder Pattern"],
+            year: 2025,
+            status: "Completed",
+            demoUrl: "",
+            codeUrl: "https://github.com/RedAlf121/langchain-mcp-builder"
+        },
+        {
+            title: "Parallel C4.5 Decision Tree",
+            description: "Parallel implementation of the C4.5 decision tree algorithm using Python multiprocessing. Nodes are expanded breadth-first and queued so training bypasses the GIL and runs faster.",
+            categories: ["datascience"],
+            icon: "fa-project-diagram",
+            tags: ["Python", "C4.5", "Multiprocessing", "Machine Learning"],
+            year: 2024,
+            status: "Completed",
+            demoUrl: "",
+            codeUrl: "https://github.com/RedAlf121/python_parallel_decision_tree"
+        },
+        {
+            title: "Parcel Sampling App",
+            description: "Flutter mobile app for agricultural parcel sampling, with interactive maps, polygonal parcel management, sampling forms, reports and role-based access.",
+            categories: ["mobile", "fullstack"],
+            icon: "fa-map-marked-alt",
+            tags: ["Flutter", "Dart", "Maps", "CRUD", "Reports"],
+            year: 2023,
+            status: "Completed",
+            demoUrl: "",
+            codeUrl: "https://github.com/RedAlf121/muestreo-parcelas-lib"
+        },
+        {
+            title: "Tic-Tac-Toe AI",
+            description: "React implementation of tic-tac-toe with local two-player mode and an AI opponent powered by the Minimax algorithm, built as a first step into React and game AI.",
+            categories: ["frontend"],
+            icon: "fa-gamepad",
+            tags: ["React", "Vite", "Minimax", "Game AI"],
+            year: 2025,
+            status: "Live",
+            demoUrl: "https://redalf121.github.io/tic-tac-toe/",
+            codeUrl: "https://github.com/RedAlf121/tic-tac-toe"
+        },
+        {
+            title: "Dirb Clone",
+            description: "Node.js CLI tool inspired by Dirb that discovers hidden web paths by fuzzing a target URL with a wordlist, firing parallel HTTP requests and reporting valid 2xx responses.",
+            categories: ["security"],
+            icon: "fa-shield-alt",
+            tags: ["Node.js", "Fuzzing", "Web Security", "CLI"],
+            year: 2025,
+            status: "Completed",
+            demoUrl: "",
+            codeUrl: "https://github.com/RedAlf121/dirb-clone"
+        },
+        {
+            title: "Where Are My Sheep?",
+            description: "Godot puzzle game inspired by Human Resource Machine: program sheep movements to solve increasingly complex levels built around data structures and logic.",
+            categories: ["gamedev"],
+            icon: "fa-paw",
+            tags: ["Godot", "GDScript", "Game Design", "Puzzles"],
+            year: 2023,
+            status: "Release pending",
+            demoUrl: "",
+            codeUrl: "https://github.com/RedAlf121/ProyectoED-Ovejas"
+        },
+        {
+            title: "Cutetris",
+            description: "Unity Tetris-like game themed around university logos, with custom C# gameplay scripts and shader work. A Godot port is also maintained in a separate repository.",
+            categories: ["gamedev"],
+            icon: "fa-cubes",
+            tags: ["Unity", "C#", "Shaders", "Game Design"],
+            year: 2025,
+            status: "Release pending",
+            demoUrl: "",
+            codeUrl: "https://github.com/RedAlf121/Cutetris"
         }
     ],
 
-    // Project Filter Buttons
-    projectFilters: [
-        { label: "All", value: "all" },
-        { label: "Fullstack", value: "fullstack" },
-        { label: "Data Science", value: "datascience" },
-        { label: "Backend", value: "backend" }
-    ],
+    // Optional labels for the auto-generated project filters.
+    // Any category used in `projects` gets a button even if it is not listed here.
+    categoryLabels: {
+        fullstack: "Fullstack",
+        backend: "Backend",
+        ai: "AI & LLMs",
+        datascience: "Data Science",
+        mobile: "Mobile",
+        frontend: "Frontend",
+        security: "Security",
+        gamedev: "Game Dev"
+    },
 
     // Contact Section
     contact: {
         heading: "Let's build something amazing together!",
         description: "Whether you have a project in mind, want to discuss opportunities, or just want to connect, I'd love to hear from you.",
-        email: "carlos.mendoza@email.com",
-        phone: "+34 612 345 678",
-        location: "Madrid, Spain",
+        email: "andezmgk@gmail.com",
+        phone: "+53 51948102",
+        location: "Barcelona, Spain",
         formFields: [
             { name: "name", label: "Name", type: "text", placeholder: "Your Name", required: true },
             { name: "email", label: "Email", type: "email", placeholder: "your.email@example.com", required: true },
@@ -225,26 +253,22 @@ const portfolioData = {
 
     // Footer
     footer: {
-        copyright: "Carlos Mendoza",
+        copyright: "Alfredo Hernandez Rodriguez",
         tagline: "Building digital experiences with code & data"
     },
 
-    // Code Window Content (Hero Section)
+    // Skills shown in the Hero code window
     codeWindow: {
-        filename: "DeveloperProfile.java",
-        code: `public class Developer {
-    private String name = "Carlos Mendoza";
-    private String[] skills = {
-        "Spring Boot",
-        "Angular",
-        "Python/ML"
-    };
-    private int experience = 5;
-
-    public void buildSolutions() {
-        // Creating innovative solutions
-        this.passion = Passion.HIGH;
-    }
+        filename: "developer.json",
+        code: `{
+  "name": "Alfredo Hernandez",
+  "role": "Fullstack Developer",
+  "languages": ["Python", "JavaScript", "TypeScript", "Dart"],
+  "backend": ["FastAPI", "Django", "MongoDB", "PostgreSQL"],
+  "frontend": ["React", "Vue", "Vite"],
+  "mobile": ["Flutter"],
+  "ai": ["LangChain", "MCP", "LLM Agents"],
+  "focus": "Fullstack apps + AI integration"
 }`
     }
 };
