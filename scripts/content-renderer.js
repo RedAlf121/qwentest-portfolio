@@ -225,6 +225,7 @@
             projectsContainer.innerHTML = portfolioData.projects
                 .map(project => {
                     const demoUrl = this.isValidUrl(project.demoUrl) ? project.demoUrl : null;
+                    const demoLabel = project.demoLabel || 'View Demo';
                     const codeUrl = this.isValidUrl(project.codeUrl) ? project.codeUrl : null;
                     const imageUrl = this.isValidUrl(project.image) ? project.image : null;
                     const categories = this.projectCategories(project);
@@ -248,7 +249,7 @@
                             <div class="project-overlay">
                                 <div class="project-links">
                                     ${demoUrl ? `
-                                        <a href="${this.escapeHtml(demoUrl)}" class="project-link" title="View Demo" aria-label="View demo of ${this.escapeHtml(project.title)}" target="_blank" rel="noopener">
+                                        <a href="${this.escapeHtml(demoUrl)}" class="project-link" title="${this.escapeHtml(demoLabel)}" aria-label="${this.escapeHtml(demoLabel)} of ${this.escapeHtml(project.title)}" target="_blank" rel="noopener">
                                             <i class="fas fa-external-link-alt"></i>
                                         </a>
                                     ` : ''}

@@ -1087,6 +1087,19 @@ input, textarea {
     transform: translateY(-3px);
 }
 
+.social-link.with-label,
+.social-btn.with-label {
+    width: auto;
+    padding: 0 var(--spacing-4);
+    gap: var(--spacing-2);
+    font-size: var(--font-size-sm);
+}
+
+.social-link.with-label span,
+.social-btn.with-label span {
+    white-space: nowrap;
+}
+
 /* Contact Form */
 .contact-form {
     background: var(--gradient-card);

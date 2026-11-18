@@ -9,9 +9,9 @@ const portfolioData = {
         name: "Alfredo Hernandez Rodriguez",
         title: "Fullstack Developer",
         greeting: "Hello, I'm",
-        location: "Barcelona, Spain",
+        location: "Santo Domingo, Dominican Republic",
         email: "andezmgk@gmail.com",
-        phone: "+53 51948102",
+        phone: "+1 (809) 488-2703",
         availability: "Available for hire",
         bio: `I'm a fullstack developer focused on building web and mobile applications end to end,
         with <strong>Python</strong> on the backend, <strong>JavaScript/TypeScript</strong> on the frontend
@@ -122,6 +122,19 @@ const portfolioData = {
     // Projects Configuration
     projects: [
         {
+            title: "Graco Construction Group",
+            description: "Corporate website for a Miami-based construction and design firm, built with Nuxt 4, Vue 3 and TypeScript. Multi-page content-driven site with a service hierarchy, a project portfolio with detail pages and galleries, team, about and contact sections, backed by static JSON data and a responsive dark design.",
+            categories: ["fullstack", "frontend"],
+            icon: "fa-building",
+            tags: ["Nuxt", "Vue 3", "TypeScript", "Tailwind CSS", "SSR/SSG"],
+            year: 2026,
+            status: "Live",
+            demoUrl: "https://graco-construction.vercel.app",
+            codeUrl: "https://github.com/RedAlf121/graco-construction",
+            image: "public/images/graco-construction.webp",
+            imageAlt: "Screenshot of the Graco Construction Group website"
+        },
+        {
             title: "Minecraft Clone",
             description: "Playable Minecraft-inspired world in the browser built with React, Three.js and React Three Fiber: block placement and destruction, gravity and collision physics with Cannon, Zustand state management and a prebuilt village map.",
             categories: ["fullstack", "gamedev"],
@@ -220,8 +233,9 @@ const portfolioData = {
             icon: "fa-cubes",
             tags: ["Unity", "C#", "Shaders", "Game Design"],
             year: 2025,
-            status: "Release pending",
-            demoUrl: "",
+            status: "Released",
+            demoUrl: "https://github.com/RedAlf121/Cutetris/releases/tag/alpha",
+            demoLabel: "View Release",
             codeUrl: "https://github.com/RedAlf121/Cutetris"
         }
     ],
@@ -244,8 +258,8 @@ const portfolioData = {
         heading: "Let's build something amazing together!",
         description: "Whether you have a project in mind, want to discuss opportunities, or just want to connect, I'd love to hear from you.",
         email: "andezmgk@gmail.com",
-        phone: "+53 51948102",
-        location: "Barcelona, Spain",
+        phone: "+1 (809) 488-2703",
+        location: "Santo Domingo, Dominican Republic",
         formFields: [
             { name: "name", label: "Name", type: "text", placeholder: "Your Name", required: true },
             { name: "email", label: "Email", type: "email", placeholder: "your.email@example.com", required: true },
