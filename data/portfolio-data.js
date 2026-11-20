@@ -131,7 +131,7 @@ const portfolioData = {
             status: "Live",
             demoUrl: "https://graco-construction.vercel.app",
             codeUrl: "https://github.com/RedAlf121/graco-construction",
-            image: "public/images/graco-construction.webp",
+            image: "public/images/graco-construction.png",
             imageAlt: "Screenshot of the Graco Construction Group website"
         },
         {
