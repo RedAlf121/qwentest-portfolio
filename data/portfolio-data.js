@@ -249,7 +249,9 @@ const portfolioData = {
             status: "Released",
             demoUrl: "https://github.com/RedAlf121/Cutetris/releases/tag/alpha",
             demoLabel: "View Release",
-            codeUrl: "https://github.com/RedAlf121/cutetris-godot"
+            codeUrl: "https://github.com/RedAlf121/cutetris-godot",
+            image: "public/images/cutetris.png",
+            imageAlt: "Screenshot of the Cutetris game"
         }
     ],
 
