@@ -156,7 +156,22 @@ const portfolioData = {
             year: 2025,
             status: "Completed",
             demoUrl: "https://playground-kappa-ebon.vercel.app/",
-            codeUrl: "https://github.com/RedAlf121/JSPlayground"
+            codeUrl: "https://github.com/RedAlf121/JSPlayground",
+            image: "public/images/web-playground.png",
+            imageAlt: "Screenshot of the Web Playground in action"
+        },
+        {
+            title: "Tic-Tac-Toe AI",
+            description: "React implementation of tic-tac-toe with local two-player mode and an AI opponent powered by the Minimax algorithm, built as a first step into React and game AI.",
+            categories: ["frontend"],
+            icon: "fa-gamepad",
+            tags: ["React", "Vite", "Minimax", "Game AI"],
+            year: 2025,
+            status: "Live",
+            demoUrl: "https://redalf121.github.io/tic-tac-toe/",
+            codeUrl: "https://github.com/RedAlf121/tic-tac-toe",
+            image: "public/images/tic-tac-toe.webp",
+            imageAlt: "Screenshot of the Tic-Tac-Toe AI game"
         },
         {
             title: "Smart Library Loan Monitoring",
@@ -201,19 +216,6 @@ const portfolioData = {
             status: "Completed",
             demoUrl: "",
             codeUrl: "https://github.com/RedAlf121/muestreo-parcelas-lib"
-        },
-        {
-            title: "Tic-Tac-Toe AI",
-            description: "React implementation of tic-tac-toe with local two-player mode and an AI opponent powered by the Minimax algorithm, built as a first step into React and game AI.",
-            categories: ["frontend"],
-            icon: "fa-gamepad",
-            tags: ["React", "Vite", "Minimax", "Game AI"],
-            year: 2025,
-            status: "Live",
-            demoUrl: "https://redalf121.github.io/tic-tac-toe/",
-            codeUrl: "https://github.com/RedAlf121/tic-tac-toe",
-            image: "public/images/tic-tac-toe.webp",
-            imageAlt: "Screenshot of the Tic-Tac-Toe AI game"
         },
         {
             title: "Dirb Clone",
