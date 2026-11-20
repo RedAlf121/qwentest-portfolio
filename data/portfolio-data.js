@@ -161,6 +161,19 @@ const portfolioData = {
             imageAlt: "Screenshot of the Web Playground in action"
         },
         {
+            title: "Turing Machine Simulator",
+            description: "Learn how turing machine works through an interactive simulation of BrainF programming language.",
+            categories: ["frontend", "html", "css", "javascript"],
+            icon: "fa-book-open",
+            tags: ["HTML", "CSS", "JavaScript", "Language Interpreter"],
+            year: 2025,
+            status: "Completed",
+            demoUrl: "https://turingmachine-psi.vercel.app/",
+            codeUrl: "https://github.com/RedAlf121/TuringMachine",
+            image: "public/images/turing.png",
+            imageAlt: "Screenshot of the Turing Machine Simulator in action"
+        },
+        {
             title: "Tic-Tac-Toe AI",
             description: "React implementation of tic-tac-toe with local two-player mode and an AI opponent powered by the Minimax algorithm, built as a first step into React and game AI.",
             categories: ["frontend"],
