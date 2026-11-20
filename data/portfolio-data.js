@@ -174,6 +174,20 @@ const portfolioData = {
             imageAlt: "Screenshot of the Tic-Tac-Toe AI game"
         },
         {
+            title: "Cutetris",
+            description: "Godot puzzle game inspired by Tetris: instead of clearing lines, the player fits pieces together to rebuild university logos. Built with GDScript, with custom gameplay scenes and menus.",
+            categories: ["gamedev"],
+            icon: "fa-cubes",
+            tags: ["Godot", "GDScript", "Game Design", "Puzzles"],
+            year: 2025,
+            status: "Released",
+            demoUrl: "https://github.com/RedAlf121/Cutetris/releases/tag/alpha",
+            demoLabel: "View Release",
+            codeUrl: "https://github.com/RedAlf121/cutetris-godot",
+            image: "public/images/cutetris.png",
+            imageAlt: "Screenshot of the Cutetris game"
+        },
+        {
             title: "Smart Library Loan Monitoring",
             description: "FastAPI platform for library loan monitoring where LLM agents query MongoDB through MCP tools, send automated email reminders and apply custom business rules, with validated JSON post-processing.",
             categories: ["backend", "ai", "datascience"],
@@ -205,20 +219,6 @@ const portfolioData = {
             status: "Completed",
             demoUrl: "",
             codeUrl: "https://github.com/RedAlf121/python_parallel_decision_tree"
-        },
-        {
-            title: "Cutetris",
-            description: "Godot puzzle game inspired by Tetris: instead of clearing lines, the player fits pieces together to rebuild university logos. Built with GDScript, with custom gameplay scenes and menus.",
-            categories: ["gamedev"],
-            icon: "fa-cubes",
-            tags: ["Godot", "GDScript", "Game Design", "Puzzles"],
-            year: 2025,
-            status: "Released",
-            demoUrl: "https://github.com/RedAlf121/Cutetris/releases/tag/alpha",
-            demoLabel: "View Release",
-            codeUrl: "https://github.com/RedAlf121/cutetris-godot",
-            image: "public/images/cutetris.png",
-            imageAlt: "Screenshot of the Cutetris game"
         },
         {
             title: "Parcel Sampling App",
