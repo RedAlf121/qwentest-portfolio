@@ -207,6 +207,20 @@ const portfolioData = {
             codeUrl: "https://github.com/RedAlf121/python_parallel_decision_tree"
         },
         {
+            title: "Cutetris",
+            description: "Godot puzzle game inspired by Tetris: instead of clearing lines, the player fits pieces together to rebuild university logos. Built with GDScript, with custom gameplay scenes and menus.",
+            categories: ["gamedev"],
+            icon: "fa-cubes",
+            tags: ["Godot", "GDScript", "Game Design", "Puzzles"],
+            year: 2025,
+            status: "Released",
+            demoUrl: "https://github.com/RedAlf121/Cutetris/releases/tag/alpha",
+            demoLabel: "View Release",
+            codeUrl: "https://github.com/RedAlf121/cutetris-godot",
+            image: "public/images/cutetris.png",
+            imageAlt: "Screenshot of the Cutetris game"
+        },
+        {
             title: "Parcel Sampling App",
             description: "Flutter mobile app for agricultural parcel sampling, with interactive maps, polygonal parcel management, sampling forms, reports and role-based access.",
             categories: ["mobile", "fullstack"],
@@ -239,20 +253,6 @@ const portfolioData = {
             demoUrl: "",
             codeUrl: "https://github.com/RedAlf121/ProyectoED-Ovejas"
         },
-        {
-            title: "Cutetris",
-            description: "Godot puzzle game inspired by Tetris: instead of clearing lines, the player fits pieces together to rebuild university logos. Built with GDScript, with custom gameplay scenes and menus.",
-            categories: ["gamedev"],
-            icon: "fa-cubes",
-            tags: ["Godot", "GDScript", "Game Design", "Puzzles"],
-            year: 2025,
-            status: "Released",
-            demoUrl: "https://github.com/RedAlf121/Cutetris/releases/tag/alpha",
-            demoLabel: "View Release",
-            codeUrl: "https://github.com/RedAlf121/cutetris-godot",
-            image: "public/images/cutetris.png",
-            imageAlt: "Screenshot of the Cutetris game"
-        }
     ],
 
     // Optional labels for the auto-generated project filters.
