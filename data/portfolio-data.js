@@ -148,6 +148,17 @@ const portfolioData = {
             imageAlt: "Screenshot of the Minecraft Clone running in the browser"
         },
         {
+            title: "Web Playground",
+            description: "Learn HTML, CSS and JavaScript in a live coding environment with instant preview. Built with HTML, CSS, JS and CodeMirror, it features a split view for code and output, syntax highlighting, and a responsive design.",
+            categories: ["frontend", "html", "css", "javascript"],
+            icon: "fa-book-open",
+            tags: ["HTML", "CSS", "JavaScript", "CodeMirror"],
+            year: 2025,
+            status: "Completed",
+            demoUrl: "https://playground-kappa-ebon.vercel.app/",
+            codeUrl: "https://github.com/RedAlf121/JSPlayground"
+        },
+        {
             title: "Smart Library Loan Monitoring",
             description: "FastAPI platform for library loan monitoring where LLM agents query MongoDB through MCP tools, send automated email reminders and apply custom business rules, with validated JSON post-processing.",
             categories: ["backend", "ai", "datascience"],
